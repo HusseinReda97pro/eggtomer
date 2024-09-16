@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UIProgressView!
     
-    let eggTimes = ["Soft":3, "Medium":420,"Hard":720]
+    let eggTimes = ["Soft":300, "Medium":420,"Hard":720]
     
     var totleTime = 0
     var scondesPassed = 0
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         progressBar.progress = 0
         titleLabel.text = haradness
+        scondesPassed = 0
 
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
